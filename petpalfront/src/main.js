@@ -20,6 +20,10 @@ import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
 import Card from "primevue/card";
+import FileUpload from 'primevue/fileupload';
+import InputGroup from "primevue/inputgroup";
+import InputGroupAddon from "primevue/inputgroupaddon";
+import SpeedDial from "primevue/speeddial";
 
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
@@ -37,6 +41,10 @@ createApp(App)
     .component('pv-toast', Toast)
     .component('pv-toastService', ToastService)
     .component('pv-floatLabel', FloatLabel)
+    .component('pv-fileUpload', FileUpload)
+    .component('pv-inputGroup', InputGroup)
+    .component('pv-inputGroupAddon', InputGroupAddon)
+    .component('pv-speedDial', SpeedDial)
 
     .directive('ripple', Ripple)
     .directive('styleclass', StyleClass)
