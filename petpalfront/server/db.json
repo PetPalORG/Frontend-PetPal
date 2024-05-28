@@ -1,0 +1,101 @@
+{
+  "pets": [
+    {
+      "id": "1",
+      "nombre": "Luna",
+      "especie": "Perro",
+      "raza": "Labrador Retriever",
+      "edad": 3,
+      "peso": 30.2,
+      "comidaFavorita": "Croquetas de pollo",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/04/Labrador_Retriever_%281210559%29.jpg",
+      "descripcion": "Luna es una perra Labrador Retriever de color dorado. Es muy amigable, enérgica y le encanta jugar al aire libre. Su comida favorita son las croquetas de pollo."
+    },
+    {
+      "id": "2",
+      "nombre": "Gabo",
+      "especie": "Reptil",
+      "raza": "Camaleón",
+      "edad": 5,
+      "peso": 8,
+      "comidaFavorita": "Cucharachas",
+      "imagen": "https://www.shutterstock.com/image-photo/cute-funny-chameleon-chamaeleo-calyptratus-600nw-1480324304.jpg",
+      "descripcion": "Gabo es un camaleón muy divertido y juguetón, le encanta cambiar de color y es muy curioso. Su comida favorita son las cucharachas."
+    }
+  ],
+  "meals": [
+    {
+      "id": "1",
+      "petID": 1,
+      "title": "Croquetas de carne",
+      "description": "Croquetas de carne hechas con ingredientes frescos y de alta calidad. Contiene carne, arroz, zanahoria, espinaca y aceite de oliva.",
+      "hour": "08:00 am"
+    },
+    {
+      "id": "2",
+      "petID": 1,
+      "title": "Croquetas de cerdo",
+      "description": "Croquetas de cerdo hechas con ingredientes frescos y de alta calidad. Contiene cerdo, arroz, zanahoria, espinaca y aceite de oliva.",
+      "hour": "06:00 pm"
+    },
+    {
+      "id": "3bac",
+      "title": "",
+      "description": "",
+      "hour": ""
+    }
+  ],
+  "appointments": [
+    {
+      "vet": "ASDASD",
+      "reason": "ASDASD",
+      "details": [
+        "ASDASD"
+      ],
+      "date": "ASDASD",
+      "hour": "ASDASD",
+      "id": "1"
+    }
+  ],
+  "treatments": [
+    {
+      "petID": 1,
+      "id": "1",
+      "title": "Medicamento contra pulgas y garrapatas",
+      "startDate": "15 de abril de 2024",
+      "duration": "3 meses",
+      "medicine": "FleaGone Plus",
+      "dose": "Aplicar una pipleta cada semana",
+      "indications": "Aplicar en la parte posterior del cuello como se indica en las intrucciones del producto"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Alergia alimentaria en perros",
+      "content": "La alergia alimentaria en perros es una reacción adversa a un alimento o ingrediente en la dieta del perro. La alergia alimentaria en perros es una reacción adversa a un alimento o ingrediente en la dieta del perro. La alergia alimentaria en perros es una reacción adversa a un alimento o ingrediente en la dieta del perro. La alergia alimentaria en perros es una reacción adversa a un alimento o ingrediente en la dieta del perro.",
+      "image": "https://image.petmd.com/files/styles/453x272/public/2023-06/food-allergies-in-dogs.jpg?w=750&q=75",
+      "author": "Melissa Boldan, DVM",
+      "authorImage": "https://image.petmd.com/files/styles/user_image/public/pictures/2021-09/Melissa%20Boldan%20Headshot%20copy.jpeg?w=48&q=75",
+      "date": "Jun. 6, 2023"
+    },
+    {
+      "id": 2,
+      "title": "Alergias al polen en perros",
+      "content": "Las alergias al polen en perros son una reacción adversa a los granos de polen que se encuentran en el aire. Las alergias al polen en perros son una reacción adversa a los granos de polen que se encuentran en el aire. Las alergias al polen en perros son una reacción adversa a los granos de polen que se encuentran en el aire. Las alergias al polen en perros son una reacción adversa a los granos de polen que se encuentran en el aire.",
+      "image": "https://image.petmd.com/files/styles/453x272/public/2024-02/GettyImages-1098033968.jpg?w=750&q=75",
+      "author": "Melissa Boldan, DVM",
+      "authorImage": "https://image.petmd.com/files/styles/user_image/public/pictures/2021-09/Melissa%20Boldan%20Headshot%20copy.jpeg?w=48&q=75",
+      "date": "Jun. 20, 2023"
+    },
+    {
+      "id": 3,
+      "title": "Alergias estacionales en perros",
+      "content": "Las alergias estacionales en perros son una reacción adversa a los alérgenos que se encuentran en el aire durante ciertas épocas del año. Las alergias estacionales en perros son una reacción adversa a los alérgenos que se encuentran en el aire durante ciertas épocas del año. Las alergias estacionales en perros son una reacción adversa a los alérgenos que se encuentran en el aire durante ciertas épocas del año. Las alergias estacionales en perros son una reacción adversa a los alérgenos que se encuentran en el aire durante ciertas épocas del año.",
+      "image": "https://image.petmd.com/files/styles/453x272/public/2023-04/dog.itching.jpeg?w=750&q=75",
+      "author": "Michelle Diener, DVM",
+      "authorImage": "https://image.petmd.com/files/styles/user_image/public/pictures/2021-10/Michelle%20Diener%20headshot_1.jpg?w=32&q=75",
+      "date": "Apr. 21, 2023"
+    }
+  ]
+}
