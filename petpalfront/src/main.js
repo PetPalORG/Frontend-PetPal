@@ -24,6 +24,7 @@ import FileUpload from 'primevue/fileupload';
 import InputGroup from "primevue/inputgroup";
 import InputGroupAddon from "primevue/inputgroupaddon";
 import SpeedDial from "primevue/speeddial";
+import TabMenu from "primevue/tabmenu";
 
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
@@ -45,6 +46,7 @@ createApp(App)
     .component('pv-inputGroup', InputGroup)
     .component('pv-inputGroupAddon', InputGroupAddon)
     .component('pv-speedDial', SpeedDial)
+    .component('pv-tabMenu', TabMenu)
 
     .directive('ripple', Ripple)
     .directive('styleclass', StyleClass)
