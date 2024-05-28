@@ -1,6 +1,6 @@
 <script>
 
-import AppCard from '@/pets/components/info-card.component.vue';
+import AppCard from '@/pets/components/pet-register/info-card.component.vue';
 import {PetService} from "@/pets/services/pet.service.js";
 export default {
   name: 'app-list',
