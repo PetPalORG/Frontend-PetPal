@@ -5,7 +5,12 @@ const routes= [
         path: "/pet-register",
         name: "pet-register",
         component: () => import("@/pets/pages/pet-register/pet-register.vue")
-    }
+    },
+    {
+        path: "/pet/:id",
+        name: "pet",
+        component: () => import("@/pets/pages/profiles/profiles.vue")
+    },
 
 ]
 
