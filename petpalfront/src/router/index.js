@@ -9,13 +9,13 @@ const routes= [
     {
         path: "/home",
         name: "home",
-        component: () => import("@/pets/pages/profiles/profiles.vue")
+        component: () => import("@/public/pages/home/home.vue")
     },
     {
         path: "/pet/:id",
         name: "pet",
         component: () => import("@/pets/pages/profiles/profiles.vue")
-    }
+    },
 ]
 
 const router = createRouter({
