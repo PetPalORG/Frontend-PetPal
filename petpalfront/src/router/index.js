@@ -9,7 +9,12 @@ const routes= [
     {
         path: "/home",
         name: "home",
-        component: () => import("@/public/pages/home/home.vue")
+        component: () => import("@/pets/pages/profiles/profiles.vue")
+    },
+    {
+        path: "/pet/:id",
+        name: "pet",
+        component: () => import("@/pets/pages/profiles/profiles.vue")
     }
 ]
 
