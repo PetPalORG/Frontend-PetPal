@@ -3,8 +3,7 @@ import AppButton from "@/pets/components/pet-register/button.component.vue";
 import FormComponent from "@/pets/components/pet-register/form.component.vue";
 import FileUploadComponent from "@/pets/components/pet-register/file-upload.component.vue";
 import DescriptionComponent from "@/pets/components/pet-register/description.component.vue";
-import SidebarComponent from "@/public/components/sidebar.component.vue";
-import {Pet} from "@/pets/models/pet.entity.js";
+import SidebarComponent from "@/pets/shared/components/sidebar.component.vue";
 import {PetService} from "@/pets/services/pet.service.js";
 import PetListComponent from "@/pets/components/pet-register/pet-list.component.vue";
 import { ref } from 'vue';
@@ -53,42 +52,42 @@ export default {
     <div class="main">
       <div class="card">
         <h1>General Information</h1>
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Nombre" />
-        </InputGroup >
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        </pv-inputGroup >
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Especie" />
-        </InputGroup >
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        </pv-inputGroup >
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Raza" />
-        </InputGroup >
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        </pv-inputGroup >
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Edad" />
-        </InputGroup >
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        </pv-inputGroup >
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Peso" />
-        </InputGroup >
-        <InputGroup class="input" >
-          <InputGroupAddon>
+        </pv-inputGroup >
+        <pv-inputGroup class="input" >
+          <pv-inputGroupAddon>
             <i class="pi pi-user"></i>
-          </InputGroupAddon>
+          </pv-inputGroupAddon>
           <InputText placeholder="Comida Favorita" />
-        </InputGroup >
+        </pv-inputGroup >
       </div>
       <div class="description">
         <file-upload-component @update-image="updatePetImage" />
