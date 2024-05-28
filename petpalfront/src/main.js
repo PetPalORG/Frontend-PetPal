@@ -21,6 +21,8 @@ import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
 import Card from "primevue/card";
 import FileUpload from 'primevue/fileupload';
+import InputGroup from "primevue/inputgroup";
+import InputGroupAddon from "primevue/inputgroupaddon";
 
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
@@ -39,6 +41,8 @@ createApp(App)
     .component('pv-toastService', ToastService)
     .component('pv-floatLabel', FloatLabel)
     .component('pv-fileUpload', FileUpload)
+    .component('pv-inputGroup', InputGroup)
+    .component('pv-inputGroupAddon', InputGroupAddon)
 
     .directive('ripple', Ripple)
     .directive('styleclass', StyleClass)
