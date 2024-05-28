@@ -16,7 +16,6 @@ const routes= [
         name: "pet",
         component: () => import("@/pets/pages/profiles/profiles.vue")
     },
-
 ]
 
 const router = createRouter({
