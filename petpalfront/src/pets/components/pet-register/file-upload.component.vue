@@ -1,9 +1,7 @@
 <script>
-import FileUpload from 'primevue/fileupload';
 
 export default {
   name: 'FileUploadComponent',
-  components: { FileUpload },
   methods: {
     onUpload(event) {
       this.$toast.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded', life: 3000 });
@@ -20,10 +18,10 @@ export default {
 <template>
   <div class="card flex justify-content-center">
     <Toast />
-    <FileUpload mode="basic" name="demo[]" url="/api/upload" accept="image/*" :maxFileSize="1000000" @upload="onUpload" class="custom-file-upload">
+    <pv-fileUpload mode="basic" name="demo[]" url="/api/upload" accept="image/*" :maxFileSize="1000000" @upload="onUpload" class="custom-file-upload">
       <span class="pi pi-cloud-upload"></span>
       <span>Upload</span>
-    </FileUpload>
+    </pv-fileUpload>
   </div>
 </template>
 

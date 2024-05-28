@@ -20,6 +20,7 @@ import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
 import Card from "primevue/card";
+import FileUpload from 'primevue/fileupload';
 
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
@@ -37,6 +38,7 @@ createApp(App)
     .component('pv-toast', Toast)
     .component('pv-toastService', ToastService)
     .component('pv-floatLabel', FloatLabel)
+    .component('pv-fileUpload', FileUpload)
 
     .directive('ripple', Ripple)
     .directive('styleclass', StyleClass)
