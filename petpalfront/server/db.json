@@ -25,24 +25,11 @@
   ],
   "meals": [
     {
-      "id": "1",
-      "petID": 1,
-      "title": "Croquetas de carne",
-      "description": "Croquetas de carne hechas con ingredientes frescos y de alta calidad. Contiene carne, arroz, zanahoria, espinaca y aceite de oliva.",
-      "hour": "08:00 am"
-    },
-    {
       "id": "2",
       "petID": 1,
       "title": "Croquetas de cerdo",
       "description": "Croquetas de cerdo hechas con ingredientes frescos y de alta calidad. Contiene cerdo, arroz, zanahoria, espinaca y aceite de oliva.",
       "hour": "06:00 pm"
-    },
-    {
-      "id": "3bac",
-      "title": "",
-      "description": "",
-      "hour": ""
     }
   ],
   "appointments": [

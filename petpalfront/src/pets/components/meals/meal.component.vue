@@ -78,11 +78,13 @@ export default {
       </div>
       <div class="card-container" v-for="meal in meals">
         <h1 class="hour">{{meal.hour}}</h1>
-        <div class="card">
-          <h1>{{meal.title}}</h1>
-          <p>{{meal.description}}</p>
+        <pv-card class="card">
+          <template #title>{{meal.title}}</template>
+          <template #content>{{meal.description}}</template>
+          <template #footer>
           <Button class="delete-button" @click="deleteMeal(meal.id)">Eliminar</Button>
-        </div>
+          </template>
+        </pv-card>
       </div>
     </div>
   </div>
@@ -148,7 +150,7 @@ button:hover {
 }
 
 .card {
-  height: 20vh;
+  height: 27vh;
   width: 50vh;
   background-color: #D9D9D9;
   border: 1px solid #ccc;
@@ -162,9 +164,8 @@ button:hover {
   background-color: cyan;
   border-radius: 1rem;
   border: none;
-  font-size: 2rem;
-  margin-left: 340px;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  margin-left: 30vh;
 }
 
 
