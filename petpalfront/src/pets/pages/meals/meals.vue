@@ -53,25 +53,7 @@ export default {
 <style scoped>
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 80px;
+  gap: 50px;
+  margin-top: 20px;
 }
-
-.toolbar {
-  width: 600px;
-  margin-left: 265px;
-  margin-top: -60px;
-
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  width: 100px;
-}
-
 </style>
