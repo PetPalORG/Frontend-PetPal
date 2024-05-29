@@ -22,7 +22,9 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
+    "last_opened_file_path": "D:/U/Ciclo 2024-01/Aplicaciones Web/Repositories/WebAppFront2-lavenganza/petpalApp",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -55,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716958766776</updated>
       <workItem from="1716958768038" duration="56000" />
-      <workItem from="1716958835234" duration="60000" />
+      <workItem from="1716958835234" duration="274000" />
     </task>
     <servers />
   </component>
