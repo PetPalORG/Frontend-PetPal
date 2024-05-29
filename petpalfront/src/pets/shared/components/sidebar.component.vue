@@ -2,9 +2,10 @@
 import ButtonComponent from "@/pets/components/pet-register/button.component.vue";
 import {Pet} from "@/pets/models/pet.entity.js";
 import {PetService} from "@/pets/services/pet.service.js";
+import SpeedDial from 'primevue/speeddial';
 export default {
   name: 'app-sidebar',
-  components: {ButtonComponent},
+  components: {ButtonComponent, SpeedDial},
   data() {
     return {
       pets: [],
@@ -43,7 +44,7 @@ export default {
 
 
 <template >
-  <pv-card style="width: 25rem; overflow: hidden" class="p-card">
+  <Card style="width: 25rem; overflow: hidden" class="p-card">
     <router-link v-for="pet in pets" :key="pet.id" :to="`/pet/${pet.id}`" >
       <div class="pets">
         <img :src="pet.imagen" alt="image" class="profile-image">
@@ -51,11 +52,11 @@ export default {
     </router-link>
     <div class="card" >
       <div :style="{ height: '200px' }" class="flex align-items-center justify-content-center" >
-        <pv-speedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning"  />
+        <SpeedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning"  />
         <Toast @click="goToPetRegister" />
       </div>
     </div>
-  </pv-card>
+  </Card>
 
 </template>
 
