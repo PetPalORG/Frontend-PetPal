@@ -31,6 +31,16 @@ const routes= [
         name: "pet-treatments",
         component: () => import("@/pets/pages/treatments/treatments.vue")
     },
+    {
+        path: "/pet/:id/medical-history/appointments",
+        name: "pet-medical-history",
+        component: () => import("@/pets/pages/medical-history/medical-history-appointments.vue")
+    },
+    {
+        path: "/pet/:id/medical-history/treatments",
+        name: "pet-medical-history-treatments",
+        component: () => import("@/pets/pages/medical-history/medical-history-treatments.vue")
+    },
 ]
 
 const router = createRouter({
