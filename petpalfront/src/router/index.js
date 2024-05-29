@@ -16,6 +16,11 @@ const routes= [
         name: "pet",
         component: () => import("@/pets/pages/profiles/profiles.vue")
     },
+    {
+        path: "/pet/:id/diet",
+        name: "pet-diet",
+        component: () => import("@/pets/pages/meals/meals.vue")
+    },
 ]
 
 const router = createRouter({

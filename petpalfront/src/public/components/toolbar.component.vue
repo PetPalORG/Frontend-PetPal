@@ -39,8 +39,8 @@ export default {
                 fill="var(--surface-card)"
             />
           </svg>
-          <pv @click="goToProfilePet" label="Perfiles" text plain />
-          <pv-button @click="goToArticles" label="Artículos" text plain />
+          <Button @click="goToProfilePet" label="Perfiles" text plain />
+          <Button @click="goToArticles" label="Artículos" text plain />
 
         </div>
       </template>
