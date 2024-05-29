@@ -26,6 +26,11 @@ const routes= [
         name: "pet-appointments",
         component: () => import("@/pets/pages/appointments/appointments.vue")
     },
+    {
+        path: "/pet/:id/treatments",
+        name: "pet-treatments",
+        component: () => import("@/pets/pages/treatments/treatments.vue")
+    },
 ]
 
 const router = createRouter({
