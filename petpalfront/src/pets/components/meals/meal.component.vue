@@ -1,6 +1,5 @@
 <script>
 import {PetService} from "@/pets/services/pet.service.js";
-import {Meal} from "@/pets/models/meal.entity.js";
 
 export default {
   name: 'app-diet',
@@ -58,9 +57,6 @@ export default {
 <template>
   <div class="container">
     <div class="main">
-      <div class="image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Labrador_Retriever_%281210559%29.jpg" alt="image">
-      </div>
       <div class="titles">
         <h1>Comidas diarias</h1>
         <div class="title-button">
@@ -92,18 +88,15 @@ export default {
 
 <style scoped>
 
-.image {
-  margin-left: 350px;
-  margin-top: -50px;
-}
-
-.main {
-  margin-left: 300px;
+.container {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
 }
 
 .titles {
   display: flex;
-  gap: 650px;
+  gap: 200px;
 }
 
 .title-button {
@@ -143,7 +136,7 @@ button:hover {
 
 .card-container {
   display: flex;
-  gap: 500px;
+  gap: 200px;
 }
 
 .card-container .hour {
@@ -167,13 +160,6 @@ button:hover {
   border: none;
   font-size: 1.5rem;
   margin-left: 30vh;
-}
-
-
-img {
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
 }
 
 /* Ajuste el diseño para pantallas pequeñas */

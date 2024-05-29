@@ -7,6 +7,7 @@
     <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/pages/meals/meals.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/pages/meals/meals.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <updated>1716958766776</updated>
       <workItem from="1716958768038" duration="56000" />
       <workItem from="1716958835234" duration="274000" />
-      <workItem from="1716959133367" duration="1833000" />
+      <workItem from="1716959133367" duration="2599000" />
     </task>
     <servers />
   </component>
