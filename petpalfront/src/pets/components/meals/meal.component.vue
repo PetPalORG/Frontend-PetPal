@@ -112,8 +112,9 @@ export default {
 
 .add {
   height: 3vh;
-  margin-top: 25px;
-  background-color: white;
+  margin-top: 3vh;
+  margin-left: 1vh;
+  background-color: black;
   border-color: white;
 }
 
