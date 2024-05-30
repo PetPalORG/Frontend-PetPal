@@ -2,6 +2,11 @@ import {createRouter, createWebHistory} from "vue-router";
 
 const routes= [
     {
+        path: "/",
+        name: "landing",
+        component: () => import("@/user/pages/landing/landing.vue")
+    },
+    {
         path: "/pet-register",
         name: "pet-register",
         component: () => import("@/pets/pages/pet-register/pet-register.vue")

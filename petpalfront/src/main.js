@@ -25,6 +25,7 @@ import InputGroup from "primevue/inputgroup";
 import InputGroupAddon from "primevue/inputgroupaddon";
 import SpeedDial from "primevue/speeddial";
 import TabMenu from "primevue/tabmenu";
+import Image from "primevue/image";
 
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
@@ -32,12 +33,13 @@ import Ripple from "primevue/ripple";
 createApp(App)
     .use(PrimeVue, {ripple: true})
     .use(router)
-    .component('Button', Button)
+    .component('pv-button', Button)
     .component('pv-toolbar', Toolbar)
-    .component('InputText', InputText)
+    .component('pv-inputText', InputText)
     .component('pv-sidebar', Sidebar)
     .component('pv-card', Card)
-    .component('Password', Password)
+    .component('pv-image', Image)
+    .component('pv-password', Password)
     .component('pv-routerLink', router)
     .component('pv-toast', Toast)
     .component('pv-toastService', ToastService)
