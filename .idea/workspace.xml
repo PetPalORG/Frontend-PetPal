@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petpalfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,21 +38,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/articles",
-    "last_opened_file_path": "C:/Users/daniel/Downloads/back/Frontend-PetPal",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\daniel\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U\Ciclo 2024-01\Aplicaciones Web\Repositories\Frontend-PetPal\petpalfront\src\pets\pages\medical-history" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\2024\MyEvent\22-05-24-ME2\Frontend-PetPal\petpalfront\src\user\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -87,7 +86,6 @@
       <workItem from="1716958835234" duration="274000" />
       <workItem from="1716959133367" duration="2599000" />
       <workItem from="1716962009532" duration="4693000" />
-      <workItem from="1717040933959" duration="314000" />
     </task>
     <servers />
   </component>
