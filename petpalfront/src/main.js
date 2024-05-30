@@ -30,6 +30,26 @@ import Image from "primevue/image";
 import StyleClass from 'primevue/styleclass';
 import Ripple from "primevue/ripple";
 
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDhluQEF6xZ2OLlbiCUx1zexp-JUaJNCqI",
+    authDomain: "pet-pal-66fcd.firebaseapp.com",
+    projectId: "pet-pal-66fcd",
+    storageBucket: "pet-pal-66fcd.appspot.com",
+    messagingSenderId: "695763079137",
+    appId: "1:695763079137:web:b2e2be02283326fd8ecca0"
+};
+
+initializeApp(firebaseConfig);
+
+
+
 createApp(App)
     .use(PrimeVue, {ripple: true})
     .use(router)
