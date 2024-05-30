@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/medical-history/medical-history-appointments.component.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/medical-history/medical-history-toolbar.component.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/medical-history/medical-history-treatments.component.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/pets/pages/medical-history/medical-history-appointments.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/pets/pages/medical-history/medical-history-treatments.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/router/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/medical-history",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "D:/U/Ciclo 2024-01/Aplicaciones Web/Repositories/Frontend-PetPal/petpalfront/src/pets/pages/medical-history",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,7 +71,7 @@
       <workItem from="1716958768038" duration="56000" />
       <workItem from="1716958835234" duration="274000" />
       <workItem from="1716959133367" duration="2599000" />
-      <workItem from="1716962009532" duration="4550000" />
+      <workItem from="1716962009532" duration="4693000" />
     </task>
     <servers />
   </component>
