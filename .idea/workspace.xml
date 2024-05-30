@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/components/login/login.component.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/components/register/register.component.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/pages/login/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/pages/register/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petpalfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "danieln3m0"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PetPalORG/Frontend-PetPal.git",
+    "accountId": "e4704789-7925-4e15-9509-da6dec40b11e"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -34,15 +38,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/user",
-    "last_opened_file_path": "D:/U/Ciclo 2024-01/Aplicaciones Web/Repositories/Frontend-PetPal/petpalfront/src/pets/pages/medical-history",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,8 +86,6 @@
       <workItem from="1716958835234" duration="274000" />
       <workItem from="1716959133367" duration="2599000" />
       <workItem from="1716962009532" duration="4693000" />
-      <workItem from="1717041720436" duration="40000" />
-      <workItem from="1717041774191" duration="700000" />
     </task>
     <servers />
   </component>

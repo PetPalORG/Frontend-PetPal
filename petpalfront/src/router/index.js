@@ -37,6 +37,16 @@ const routes= [
         component: () => import("@/pets/pages/treatments/treatments.vue")
     },
     {
+        path: "/articles",
+        name: "articles",
+        component: () => import("@/articles/pages/search/search.vue")
+    },
+    {
+        path: "/article/:id",
+        name: "article-detail",
+        component: () => import("@/articles/pages/detail/detail.vue")
+    },
+    {
         path: "/pet/:id/medical-history/appointments",
         name: "pet-medical-history",
         component: () => import("@/pets/pages/medical-history/medical-history-appointments.vue")
