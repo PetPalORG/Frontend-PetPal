@@ -46,6 +46,16 @@ const routes= [
         name: "pet-medical-history-treatments",
         component: () => import("@/pets/pages/medical-history/medical-history-treatments.vue")
     },
+    {
+        path: "/login",
+        name: "login",
+        component: () => import("@/user/pages/login/login.vue")
+    },
+    {
+        path: "/register",
+        name: "register",
+        component: () => import("@/user/pages/register/register.vue")
+    }
 ]
 
 const router = createRouter({
