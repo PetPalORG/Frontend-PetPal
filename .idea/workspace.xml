@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="" />
+    <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/components/login/login.component.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/components/register/register.component.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/pages/login/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petpalfront/src/user/pages/register/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/router/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +34,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/user",
     "last_opened_file_path": "D:/U/Ciclo 2024-01/Aplicaciones Web/Repositories/Frontend-PetPal/petpalfront/src/pets/pages/medical-history",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -32,13 +42,16 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U\Ciclo 2024-01\Aplicaciones Web\Repositories\Frontend-PetPal\petpalfront\src\pets\pages\medical-history" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\2024\MyEvent\22-05-24-ME2\Frontend-PetPal\petpalfront\src\user\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -56,7 +69,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
       </set>
     </attachedChunks>
   </component>
@@ -72,6 +85,8 @@
       <workItem from="1716958835234" duration="274000" />
       <workItem from="1716959133367" duration="2599000" />
       <workItem from="1716962009532" duration="4693000" />
+      <workItem from="1717041720436" duration="40000" />
+      <workItem from="1717041774191" duration="700000" />
     </task>
     <servers />
   </component>
