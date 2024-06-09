@@ -27,6 +27,7 @@ export default {
     },
     async addTreatment() {
       try {
+        this.newTreatment.petID = this.$route.params.petID;
         const response = await this.petService.saveTreatment(this.newTreatment);
         console.log(response.data);
         this.showForm = false;

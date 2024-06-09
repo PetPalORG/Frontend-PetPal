@@ -1,5 +1,6 @@
 <script>
 import {PetService} from "@/pets/services/pet.service.js";
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
   name: 'app-appointment',
@@ -29,6 +30,8 @@ export default {
     },
     async addAppointment() {
       try {
+        this.newAppointment.id = uuidv4();
+        this.newAppointment.petID = this.$route.params.petID;
         const response = await this.petService.saveAppointments(this.newAppointment);
         console.log(response.data);
         this.showForm = false;
@@ -89,7 +92,6 @@ export default {
           <template #subtitle>
             <h3>Veterinaria: {{appointment.vet}}</h3>
             <h3>Propósito: {{appointment.reason}}</h3>
-            <h3>Detalles</h3>
             <h3>Propósito: {{appointment.reason}}</h3>
             <h3>Detalles</h3>
           </template>

@@ -25,35 +25,37 @@
   ],
   "meals": [
     {
-      "id": "2",
-      "petID": 1,
-      "title": "Croquetas de cerdo",
-      "description": "Croquetas de cerdo hechas con ingredientes frescos y de alta calidad. Contiene cerdo, arroz, zanahoria, espinaca y aceite de oliva.",
-      "hour": "06:00 pm"
+      "title": "Huesos de pollo con galletas crocantes",
+      "description": "Huesos de pollo acompañados de deliciosas galletas crocantes, junto con arroz, zanahorias y un poco de carne picada.",
+      "hour": "3:00 pm",
+      "id": 1
     }
   ],
   "appointments": [
+    {},
     {
-      "vet": "ASDASD",
-      "reason": "ASDASD",
+      "vet": "Veterinaria Huellas",
+      "reason": "Chequeo mensual",
       "details": [
-        "ASDASD"
+        "Chequeo de mascota",
+        "Chequeo de vacunación",
+        "Desparasitasión",
+        "Baño"
       ],
-      "date": "ASDASD",
-      "hour": "ASDASD",
-      "id": "1"
+      "date": "13 de julio de 2024",
+      "hour": "3:00 pm",
+      "id": "eedcb1ba-048a-4137-a8b5-74f832b80f69"
     }
   ],
   "treatments": [
     {
-      "petID": 1,
-      "id": "1",
-      "title": "Medicamento contra pulgas y garrapatas",
-      "startDate": "15 de abril de 2024",
-      "duration": "3 meses",
-      "medicine": "FleaGone Plus",
-      "dose": "Aplicar una pipleta cada semana",
-      "indications": "Aplicar en la parte posterior del cuello como se indica en las intrucciones del producto"
+      "title": "Aplicación de antipulgas",
+      "startDate": "12 de julio de 2024",
+      "duration": "1 mes",
+      "medicine": "Antipulgas ",
+      "dose": "1 vez al día",
+      "indications": "Tener cuidado al momento de rociar a la mascota",
+      "id": 1
     }
   ],
   "articles": [

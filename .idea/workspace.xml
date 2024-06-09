@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="fix:btn login reg">
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/server/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/appointments/appointment.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/appointments/appointment.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/treatments/treatment.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/treatments/treatment.component.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U\Ciclo 2024-01\Aplicaciones Web\Repositories\Frontend-PetPal\petpalfront\src\pets\pages\medical-history" />
@@ -96,6 +98,7 @@
       <workItem from="1716959133367" duration="2599000" />
       <workItem from="1716962009532" duration="4693000" />
       <workItem from="1717928440692" duration="549000" />
+      <workItem from="1717968492470" duration="1797000" />
     </task>
     <servers />
   </component>
