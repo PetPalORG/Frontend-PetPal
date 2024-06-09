@@ -63,7 +63,7 @@ export default {
         <h1>Citas veterinarias</h1>
         <div class="title-button">
           <h1>Agregar cita</h1>
-          <button class="add" @click="showForm = true">+</button>
+          <pv-button class="add" @click="showForm = true">+</pv-button>
         </div>
           <div v-if="showForm" class="modal">
             <div class="modal-content">
@@ -71,11 +71,11 @@ export default {
               <input v-model="newAppointment.reason" placeholder="Razón">
               <div v-for="(detail, index) in newAppointment.details" :key="index">
                 <input v-model="newAppointment.details[index]" placeholder="Detail">
-                <button @click="addDetailField">+</button> <!-- add this line -->
+                <pv-button @click="addDetailField">+</pv-button>
               </div>
               <input v-model="newAppointment.date" placeholder="Fecha">
               <input v-model="newAppointment.hour" placeholder="Hora">
-              <button @click="addAppointment" >Save</button>
+              <pv-button @click="addAppointment" >Save</pv-button>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default {
             </ul>
           </template>
           <template #footer>
-            <Button class="delete-button" @click="deleteAppointment(appointment.id)">Eliminar</Button>
+            <pv-button class="delete-button" @click="deleteAppointment(appointment.id)">Eliminar</pv-button>
           </template>
         </pv-card>
       </div>
@@ -120,9 +120,11 @@ export default {
 
 .add {
   height: 3vh;
-  margin-top: 25px;
-  background-color: white;
-  border-color: white;
+  margin-top: 3vh;
+  margin-left: 1vh;
+  background-color: yellow;
+  border-radius: 1rem;
+  color: black;
 }
 
 .modal {
@@ -192,6 +194,7 @@ input:focus {
   border: none;
   font-size: 1.5rem;
   margin-left: 30vh;
+  color: black;
 }
 
 button:hover {

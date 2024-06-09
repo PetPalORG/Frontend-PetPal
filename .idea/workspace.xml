@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b75242c-6f35-4d0f-9893-96b2986ba1ab" name="Changes" comment="fix:btn login reg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petpalfront/src/public/components/toolbar.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/public/components/toolbar.component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/appointments/appointment.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/appointments/appointment.component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/meals/meal.component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petpalfront/src/pets/components/treatments/treatment.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/petpalfront/src/pets/components/treatments/treatment.component.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <workItem from="1716958835234" duration="274000" />
       <workItem from="1716959133367" duration="2599000" />
       <workItem from="1716962009532" duration="4693000" />
-      <workItem from="1717928440692" duration="138000" />
+      <workItem from="1717928440692" duration="549000" />
     </task>
     <servers />
   </component>

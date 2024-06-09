@@ -61,14 +61,14 @@ export default {
         <h1>Comidas diarias</h1>
         <div class="title-button">
           <h1>Agregar comida</h1>
-          <Button class="add" @click="showForm = true">+</Button>
+          <pv-button class="add" @click="showForm = true">+</pv-button>
         </div>
         <div v-if="showForm" class="modal">
           <div class="modal-content">
             <input v-model="newMeal.title" placeholder="Título">
             <input v-model="newMeal.hour" placeholder="Hora">
             <input v-model="newMeal.description" placeholder="Descripción">
-            <Button @click="addMeal" >Save</Button>
+            <pv-button @click="addMeal" >Save</pv-button>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default {
           <template #title>{{meal.title}}</template>
           <template #content>{{meal.description}}</template>
           <template #footer>
-          <Button class="delete-button" @click="deleteMeal(meal.id)">Eliminar</Button>
+          <pv-button class="delete-button" @click="deleteMeal(meal.id)">Eliminar</pv-button>
           </template>
         </pv-card>
       </div>
@@ -107,8 +107,9 @@ export default {
   height: 3vh;
   margin-top: 3vh;
   margin-left: 1vh;
-  background-color: black;
-  border-color: white;
+  background-color: yellow;
+  border-radius: 1rem;
+  color: black;
 }
 
 .modal {
@@ -160,6 +161,7 @@ button:hover {
   border: none;
   font-size: 1.5rem;
   margin-left: 30vh;
+  color: black;
 }
 
 /* Ajuste el diseño para pantallas pequeñas */

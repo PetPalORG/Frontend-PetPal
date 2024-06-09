@@ -61,7 +61,7 @@ export default {
         <h1>Tratamientos</h1>
         <div class="title-button">
           <h1>Agregar tratamiento</h1>
-          <Button class="add" @click="showForm = true">+</Button>
+          <pv-button class="add" @click="showForm = true">+</pv-button>
         </div>
         <div v-if="showForm" class="modal">
           <div class="modal-content">
@@ -71,7 +71,7 @@ export default {
             <input v-model="newTreatment.medicine" placeholder="Medicamento">
             <input v-model="newTreatment.dose" placeholder="Dosis">
             <input v-model="newTreatment.indications" placeholder="Indicaciones">
-            <button @click="addTreatment">Agregar</button>
+            <pv-button @click="addTreatment">Agregar</pv-button>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default {
             <h2>Indicaciones: {{treatment.indications}}</h2>
           </template>
           <template #footer>
-            <Button class="delete-button" @click="deleteTreatment(treatment.id)">Eliminar</Button>
+            <pv-button class="delete-button" @click="deleteTreatment(treatment.id)">Eliminar</pv-button>
           </template>
         </pv-card>
       </div>
@@ -107,8 +107,9 @@ export default {
   height: 3vh;
   margin-top: 3vh;
   margin-left: 1vh;
-  background-color: black;
-  border-color: white;
+  background-color: yellow;
+  border-radius: 1rem;
+  color: black;
 }
 
 .modal {
@@ -179,5 +180,6 @@ button:hover {
   font-size: 2rem;
   margin-left: 110vh;
   margin-top: -30px;
+  color: black;
 }
 </style>
