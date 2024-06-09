@@ -39,7 +39,7 @@ export default {
                 fill="var(--surface-card)"
             />
           </svg>
-          <pv @click="goToProfilePet" label="Perfiles" text plain />
+          <pv-button @click="goToProfilePet" label="Perfiles" text plain />
           <pv-button @click="goToArticles" label="Artículos" text plain />
 
         </div>
@@ -47,8 +47,8 @@ export default {
 
       <template #end>
         <div class="flex align-items-center gap-2">
-          <Button @click = "goToHome" label="Home" severity="contrast" size="small" />
-          <Button @click = "goToLogOut" label="LogOut" severity="contrast" size="small" />
+          <pv-button @click = "goToHome" label="Home" severity="contrast" size="small" />
+          <pv-button @click = "goToLogOut" label="LogOut" severity="contrast" size="small" />
           <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" style="width: 32px; height: 32px" />
         </div>
       </template>
@@ -62,4 +62,6 @@ export default {
 label {
   color: black;
 }
+
+
 </style>
