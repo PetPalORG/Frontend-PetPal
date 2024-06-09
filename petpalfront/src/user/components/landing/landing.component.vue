@@ -47,6 +47,12 @@ export default {
     }
   },
   methods:{
+    goToLogin() {
+      this.$router.push('/login');
+    },
+    goToRegister() {
+      this.$router.push('/register');
+    },
 
   }
 }
@@ -86,8 +92,8 @@ export default {
 
           <template #end>
             <div class="flex align-items-center gap-2">
-              <pv-button label="Ingresar" severity="" size="small" />
-              <pv-button label="Registrarse" severity="" size="small"/>
+              <pv-button @click="goToLogin" label="Ingresar" severity="" size="small" />
+              <pv-button @click="goToRegister" label="Registrarse" severity="" size="small"/>
             </div>
           </template>
         </pv-toolbar>
