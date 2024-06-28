@@ -53,7 +53,7 @@ const register = () => {
     })
     .catch((error) => {
       console.log(error.code);
-      dialogMessage.value = error.message; // Set the error message
+      dialogMessage.value = "Error: Este email ya registrado";
       isDialogVisible.value = true; // Show the dialog
     });
 };
