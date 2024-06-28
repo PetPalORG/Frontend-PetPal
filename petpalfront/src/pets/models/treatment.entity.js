@@ -1,12 +1,9 @@
 export class Treatment {
-    constructor(id = "", petID = "", title = "", startDate = "", duration = "", medicine = "", dose = "", indications = "") {
+    constructor(id = 0, appointmentId = 0, diagnosis = "", startDate = new Date(), endDate = new Date()) {
         this.id = id;
-        this.petID = petID;
-        this.title = title;
+        this.appointmentId = appointmentId;
+        this.diagnosis = diagnosis;
         this.startDate = startDate;
-        this.duration = duration;
-        this.medicine = medicine;
-        this.dose = dose;
-        this.indications = indications;
+        this.endDate = endDate;
     }
 }

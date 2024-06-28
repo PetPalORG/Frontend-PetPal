@@ -1,63 +1,74 @@
 <template>
   <div class="main">
     <div class="fondo"></div>
-
-    <!-- Sección derecha con el formulario de inicio de sesión -->
     <div class="form p-col-4">
-      <h2>Pet Pal</h2>
-      <h3><strong>Amamos cuidar a nuestras mascotas</strong></h3>
-      <div class="formulario">
-        <div class="rellenar">
-          <label>Correo:</label>
-          <pv-inputText placeholder="Email" class="texto p-inputtext-lg w-19rem" v-model="email"/>
+      <div class="box">
+        <h2>Pet Pal</h2>
+        <h3><strong>Amamos cuidar a los animales</strong></h3>
+        <div class="formulario">
+          <div class="rellenar">
+            <label>Correo:</label>
+            <pv-inputText placeholder="Email" class="texto p-inputtext-lg w-19rem" v-model="email"/>
+          </div>
+          <div class="rellenar p-field">
+            <label>Contraseña:</label>
+            <pv-password placeholder="Password" class="texto2 p-inputtext-lg w-18rem" v-model="password" toggleMask />
+          </div>
+          <p v-if="showPassword">{{ showPassword? 'Hide' : 'Show' }} Password</p>
+          <p><pv-button @click="register" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Registrarse</pv-button></p>
+          <p><pv-button @click="singInWithGoogle" class="caja p-button-lg p-button-secondary justify-content-center w-19rem ">Iniciar sesión con Google</pv-button></p>
+          <!-- Agregar aquí el enlace para iniciar sesión -->
+          <p class="login-link">¿Ya estás registrado? <a href="#" @click="goToLogin">Inicia sesión</a></p>
         </div>
-        <div class="rellenar p-field">
-          <label>Contraseña:</label>
-          <pv-password placeholder="Password" class="texto2 p-inputtext-lg w-18rem" v-model="password" toggleMask />
-        </div>
-        <p v-if="showPassword">{{ showPassword? 'Hide' : 'Show' }} Password</p>
-        <p><pv-button @click="register" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Registrarse</pv-button></p>
-        <p><pv-button @click="singInWithGoogle" class="caja p-button-lg p-button-secondary justify-content-center w-19rem ">Iniciar sesión con Google</pv-button></p>
       </div>
     </div>
+    <dialogComponent :isVisible="isDialogVisible" :message="dialogMessage" @close="isDialogVisible = false"/>
   </div>
 </template>
 
 <script setup>
-import {ref} from "vue";
-import {getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
-import {useRouter} from "vue-router";
+import { ref } from "vue";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useRouter } from "vue-router";
+import dialogComponent from "../dialog/dialog.component.vue";
 
 const email = ref("");
 const password = ref("");
 const showPassword = ref(false);
 const router = useRouter();
+const isDialogVisible = ref(false);
+const dialogMessage = ref("");
+
+function goToLogin() {
+  router.push('/login');
+}
 
 const register = () => {
   const auth = getAuth();
   createUserWithEmailAndPassword(auth, email.value, password.value)
-      .then((data) => {
-        console.log("Successfully registered");
-        console.log(auth.currentUser);
-        router.push('/');
-      })
-      .catch((error) => {
-        console.log(error.code);
-        alert(error.message);
-      });
+    .then((data) => {
+      console.log("Successfully registered");
+      console.log(auth.currentUser);
+      router.push('/');
+    })
+    .catch((error) => {
+      console.log(error.code);
+      dialogMessage.value = "Error: Este email ya registrado";
+      isDialogVisible.value = true; // Show the dialog
+    });
 };
 
 const singInWithGoogle = () => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(getAuth(), provider)
-      .then((result) => {
-        console.log(result.user);
-        router.push('/home');
-      })
-      .catch((error) => {
-        console.log(error.code);
-        console.log(error.message);
-      });
+    .then((result) => {
+      console.log(result.user);
+      router.push('/home');
+    })
+    .catch((error) => {
+      console.log(error.code);
+      console.log(error.message);
+    });
 };
 </script>
 
@@ -92,23 +103,30 @@ const singInWithGoogle = () => {
   margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-  .form {
-    max-width: 400px; /* Limita el ancho máximo del formulario en pantallas grandes */
-  }
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .fondo {
     display: none;
   }
 
-  .main {
+  .form {
+    margin: -10px;
+    margin-top: -20px;
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 110%; /* 1/3 de la anchura de la ventana del navegador */
+    height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana del navegador */
+    background-image: url('../../../assets/images/fondo.png');
   }
 
-  .form {
-    margin-top: 0;
+  .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
   }
 }
 </style>

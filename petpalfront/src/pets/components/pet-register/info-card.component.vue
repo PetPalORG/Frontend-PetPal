@@ -13,26 +13,26 @@ export default {
 <template>
   <div class="columna1">
     <div class="image">
-      <img :src="pet.imagen" alt="imagen de la mascota" width="400px" height="365px">
+      <img :src="pet.imagePath" alt="imagen de la mascota" width="400px" height="365px">
     </div>
     <div class="columna2">
       <div class="columna3">
         <pv-card class="p-card">
           <template #title>Nombre</template>
           <template #content>
-            <p class="m-0">{{ pet.nombre }}</p>
+            <p class="m-0">{{ pet.name }}</p>
           </template>
         </pv-card>
         <pv-card class="p-card">
           <template #title>Especie</template>
           <template #content>
-            <p class="m-0">{{ pet.especie }}</p>
+            <p class="m-0">{{ pet.species }}</p>
           </template>
         </pv-card>
         <pv-card class="p-card">
           <template #title>Edad</template>
           <template #content>
-            <p class="m-0">{{ pet.edad }}</p>
+            <p class="m-0">{{ pet.age }}</p>
           </template>
         </pv-card>
       </div>
@@ -40,19 +40,13 @@ export default {
         <pv-card class="p-card">
           <template #title>Raza</template>
           <template #content>
-            <p class="m-0">{{ pet.raza }}</p>
+            <p class="m-0">{{ pet.breed }}</p>
           </template>
         </pv-card>
         <pv-card class="p-card">
           <template #title>Peso</template>
           <template #content>
-            <p class="m-0">{{ pet.peso }}</p>
-          </template>
-        </pv-card>
-        <pv-card class="p-card">
-          <template #title>Comida Favorita</template>
-          <template #content>
-            <p class="m-0">{{ pet.comidaFavorita }}</p>
+            <p class="m-0">{{ pet.weight }}</p>
           </template>
         </pv-card>
       </div>
@@ -62,7 +56,7 @@ export default {
     <pv-card class="p-card-description">
       <template #title>Descripción</template>
       <template #content>
-        <p class="m-0">{{ pet.descripcion }}</p>
+        <p class="m-0">{{ pet.description }}</p>
       </template>
     </pv-card>
   </div>

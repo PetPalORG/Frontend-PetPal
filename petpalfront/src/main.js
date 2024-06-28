@@ -53,6 +53,7 @@ initializeApp(firebaseConfig);
 createApp(App)
     .use(PrimeVue, {ripple: true})
     .use(router)
+    .use(ToastService)
     .component('pv-button', Button)
     .component('pv-toolbar', Toolbar)
     .component('pv-inputText', InputText)

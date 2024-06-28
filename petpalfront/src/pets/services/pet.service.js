@@ -1,21 +1,38 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://localhost:7190/api/v1",
 });
 
 export class PetService {
     getPets() {
         return http.get('/pets');
     }
-    getMeals() {
-        return http.get('/meals')
+    getMealsByPetId(petId) {
+        return http.get(`/pets/${petId}/meal`)
     }
-    getAppointments() {
-        return http.get('/appointments')
+    getAppointmentsByPetId(petId) {
+        return http.get(`/pets/${petId}/appointments`)
     }
-    getTreatments() {
-        return http.get('/treatments')
+    getTreatmentsByAppointmentId(appointmentId) {
+        return http.get(`/appointments/${appointmentId}/treatment`)
+    }
+    getAppointmentsByPetIdToArray(petId) {
+        return http.get(`/pets/${petId}/appointments`)
+            .then(response => {
+                // Asegúrate de que la respuesta es un arreglo
+                if (Array.isArray(response.data)) {
+                    return response.data;
+                } else {
+                    // Si no es un arreglo, pero existe, envuelve el resultado en un arreglo
+                    return response.data ? [response.data] : [];
+                }
+            })
+            .catch(error => {
+                // Manejo de errores, por ejemplo, devolver un arreglo vacío si hay un error
+                console.error("Error fetching appointments:", error);
+                return [];
+            });
     }
     async submitForm(pet) {
         try {
@@ -27,7 +44,7 @@ export class PetService {
     }
     async saveMeal(meal) {
         try {
-            const response = await http.post('/meals', meal);
+            const response = await http.post('/meal', meal);
             return response.data;
         } catch (error) {
             console.error(error);
@@ -36,7 +53,7 @@ export class PetService {
     }
     async deleteMeal(mealId) {
         try {
-            const response = await http.delete(`/meals/${mealId}`);
+            const response = await http.delete(`/meal/id/${mealId}`);
             return response.data;
         } catch (error) {
             console.error(error);
@@ -54,7 +71,7 @@ export class PetService {
     }
     async deleteAppointment(appointmentId) {
         try {
-            const response = await http.delete(`/appointments/${appointmentId}`);
+            const response = await http.delete(`/appointments/id/${appointmentId}`);
             return response.data;
         } catch (error) {
             console.error(error);
@@ -63,7 +80,7 @@ export class PetService {
     }
     async saveTreatment(treatment) {
         try {
-            const response = await http.post('/treatments', treatment);
+            const response = await http.post('/treatment', treatment);
             return response.data;
         } catch (error) {
             console.error(error);
@@ -72,7 +89,34 @@ export class PetService {
     }
     async deleteTreatment(treatmentId) {
         try {
-            const response = await http.delete(`/treatments/${treatmentId}`);
+            const response = await http.delete(`/treatment/id/${treatmentId}`);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
+    async saveMedication(medication) {
+        try {
+            const response = await http.post('/medication', medication);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
+    async getMedicationById(medicationId) {
+        try {
+            const response = await http.get(`/medication/id/${medicationId}`);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
+    async getMedicationByTreatmentId(treatmentId) {
+        try {
+            const response = await http.get(`/treatments/${treatmentId}/medication`);
             return response.data;
         } catch (error) {
             console.error(error);
@@ -81,18 +125,18 @@ export class PetService {
     }
     async getPetById(id) {
         try {
-            const response = await http.get(`/pets/${id}`);
+            const response = await http.get(`/pets/id/${id}`);
             return response.data;
         } catch (error) {
             console.error(error);
         }
     }
     getArticles() {
-        return http.get('/articles')
+        return http.get('/article')
     }
     async getArticleById(id) {
         try {
-            const response = await http.get(`/articles/${id}`);
+            const response = await http.get(`/article/${id}`);
             return response.data;
         } catch (error) {
             console.error(error);

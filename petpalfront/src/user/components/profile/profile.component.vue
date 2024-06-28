@@ -8,10 +8,6 @@ export default {
       user: {
         email: '',
         password: '',
-        name: '',
-        phone: '',
-        language: '',
-        country: ''
       }
     }
   },

@@ -70,26 +70,6 @@ export default {
             </div>
           </template>
 
-          <template #center>
-            <div class="flex align-items-center gap-2">
-              <a href="#landing_services">
-                <pv-button label="Servicios" text plain />
-              </a>
-              <a href="#landing_investigation">
-                <pv-button label="Recursos" text plain />
-              </a>
-              <a href="#landing_ad">
-                <pv-button label="App" text plain />
-              </a>
-              <a href="#landing_feedback">
-                <pv-button label="Testimonios" text plain />
-              </a>
-              <a href="#landing_authors">
-                <pv-button label="Nosotros" text plain />
-              </a>
-            </div>
-          </template>
-
           <template #end>
             <div class="flex align-items-center gap-2">
               <pv-button @click="goToLogin" label="Ingresar" severity="" size="small" />
@@ -111,7 +91,8 @@ export default {
                style="background-color: #FFE55E;
                border-radius: 40% 75% 55% 75% / 62% 75% 40% 85%;
                margin-right: 0; /* Reset for mobile view */
-               margin-top: 0; /* Reset for mobile view */">
+               margin-top: 0; /* Reset for mobile view */
+               }">
         </div>
       </section>
 
@@ -140,7 +121,7 @@ export default {
 
       <section id="landing_investigation" class="card gap-8 bg-indigo-50 flex flex-column md:flex-row justify-content-center align-items-center p-4">
         <div class="max-w-30rem p-4 flex justify-content-center md:justify-content-center">
-          <img src="../../../assets/images/landing_investigation.png" alt="">
+          <img src="../../../assets/images/landing_investigation.png" alt="" class="investigation-image">
         </div>
 
         <div class="border-round max-w-30rem bg-blue-100 p-4">
@@ -157,22 +138,7 @@ export default {
           <pv-button href="#" class="cta">Explorar ahora</pv-button>
         </div>
         <div class="max-w-30rem p-4 flex justify-content-center md:justify-content-center">
-          <img src="../../../assets/images/landing_comunity.png" alt="">
-        </div>
-      </section>
-
-      <section id="landing_ad" class="card justify-content-center items-center">
-        <div class="card bg-blue-50 p-2">
-          <div class="card grid align-items-center justify-content-center h-30rem p-4">
-            <img src="../../../assets/images/landing_ad.png" class="card flex h-full" alt="">
-          </div>
-
-          <div class="card align-items-center justify-center items-center text-center p-5">
-            <h1>PetPal te acompaña <br>donde más lo necesites</h1>
-            <a href="https://play.google.com/store/apps/details?id=com.fgol.PetPalOrg" target="_blank">
-              <pv-button class="cta mt-4">Descargar App</pv-button>
-            </a>
-          </div>
+          <img src="../../../assets/images/landing_comunity.png" alt="" class="investigation-image">
         </div>
       </section>
 
@@ -257,8 +223,7 @@ export default {
             </figure>
           </section>
 
-          <img src="../../../assets/images/landing_author_rightarrow.svg" class="author__arrow" id="next" alt="">
-        </div>
+          </div>
       </section>
 
     </main>
@@ -302,12 +267,6 @@ export default {
       </div>
 
     </footer>
-
-    <div class="card flex justify-content-center">
-      <a href="#landing_toolbar" class="scroll-to-top flex align-items-center justify-content-center">
-        <pv-button icon="pi pi-arrow-up" text />
-      </a>
-    </div>
   </div>
 </template>
 
@@ -496,6 +455,23 @@ export default {
 
 .footer__icons{
   margin-bottom: 10px;
+}
+
+@media(max-width:450px){
+  .author__img{
+    width: 90px;
+    height: 90px;
+  }
+
+  .rounded-image {
+    display: none;
+  }
+
+  .investigation-image {
+    display: none;
+  }
+
+
 }
 
 

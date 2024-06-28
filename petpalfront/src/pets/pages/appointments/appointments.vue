@@ -19,10 +19,11 @@ export default {
   },
   methods: {
     buildAppointmentListFromResponseData(appointments) {
-      return appointments.map(appointment => new Appointment(appointment.petID, appointment.id, appointment.vet, appointment.reason, appointment.details, appointment.date, appointment.hour));
+      return appointments.map(appointment => new Appointment(appointment.id, appointment.petId, appointment.vet, appointment.reason, appointment.detail, appointment.date, appointment.hour));
     },
-    getAppointments() {
-      this.newApi.getAppointments()
+    async getAppointments() {
+      const petId = this.$route.params.id;
+      await this.newApi.getAppointmentsByPetId(petId)
           .then(response => {
             let appointments_json = response.data;
             this.appointments = this.buildAppointmentListFromResponseData(appointments_json);

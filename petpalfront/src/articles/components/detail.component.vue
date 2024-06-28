@@ -30,7 +30,7 @@ export default {
         </div>
       </div>
       <div class="right-side">
-        <img :src="article.image" alt="Article photo">
+        <img :src="article.imagePath" alt="Article photo">
       </div>
     </div>
     <p class="paragraph">{{ article.content }}</p>

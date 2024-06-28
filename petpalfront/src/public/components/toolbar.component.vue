@@ -16,7 +16,7 @@ export default {
       this.$router.push('/home');
     },
     goToProfilePet() {
-      this.$router.push('/pet/:id');
+      this.$router.push('/pets');
     }
   }
 };
