@@ -131,11 +131,11 @@ export default {
         </div>
       </section>
 
-      <section id="video_section" class="card bg-cyan-50 flex flex-column  justify-content-center align-items-center column-gap-8 p-4">
-        <h1>VIDEO About-the-product</h1>
-        <div class="max-w-30rem border-round bg-blue-100 p-4 flex justify-content-center">
-          
+      <section id="video_section" class="card bg-cyan-50 flex flex-column justify-content-center align-items-center column-gap-8 p-4">
+        <h1>About-the-product / About-the-team</h1>
+        <div class="max-w-full border-round bg-blue-100 p-4 flex justify-content-center" style="gap: 20px;"> <!-- Ajusta el gap según necesites -->
           <iframe width="560" height="315" src="https://www.youtube.com/embed/XrjAILusm4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gfxE29PV4AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
 
