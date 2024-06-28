@@ -1,27 +1,30 @@
 <template>
-  <div class="main p-grid p-jc-center p-ai-center">
+
+  <div class="main">
     <div class="fondo p-col-8"></div>
 
     <!-- Sección derecha con el formulario de inicio de sesión -->
     <div class="form p-col-4">
-      <h2>Pet Pal</h2>
-      <h3><strong>Que bueno verte de nuevo</strong></h3>
-      <div class="formulario">
-        <div class="rellenar p-field">
-          <label>Usuario:</label>
-          <pv-inputText placeholder="Email" class="p-inputtext-lg w-19rem " v-model="email"/>
+      <div class="box">
+        <h2>Pet Pal</h2>
+        <h3><strong>Que bueno verte de nuevo</strong></h3>
+        <div class="formulario">
+          <div class="rellenar p-field">
+            <label>Usuario:</label>
+            <pv-inputText placeholder="Email" class="p-inputtext-lg w-19rem " v-model="email"/>
+          </div>
+          <div class="rellenar p-field">
+            <label>Contraseña:</label>
+            <pv-password placeholder="Password" class="p-inputtext-lg w-18rem" v-model="password" toggleMask  />
+          </div>
+          <p v-if="errMsg">{{ errMsg }}</p>
+          <p><pv-button @click="login" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Iniciar Sesión</pv-button></p>
+          <p><pv-button @click="singInWithGoogle" class="caja p-button-lg p-button-secondary justify-content-center w-19rem ">Iniciar sesión con Google</pv-button></p>
+          <div class="p-field">
+            <label>No tienes cuenta?</label>
+          </div>
+          <p><pv-button @click="register" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Registrate</pv-button></p>
         </div>
-        <div class="rellenar p-field">
-          <label>Contraseña:</label>
-          <pv-password placeholder="Password" class="p-inputtext-lg w-18rem" v-model="password" toggleMask  />
-        </div>
-        <p v-if="errMsg">{{ errMsg }}</p>
-        <p><pv-button @click="login" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Iniciar Sesión</pv-button></p>
-        <p><pv-button @click="singInWithGoogle" class="caja p-button-lg p-button-secondary justify-content-center w-19rem ">Iniciar sesión con Google</pv-button></p>
-        <div class="p-field">
-          <label>No tienes cuenta?</label>
-        </div>
-        <p><pv-button @click="register" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Registrate</pv-button></p>
       </div>
     </div>
   </div>
@@ -29,6 +32,9 @@
 
 
 <style scoped>
+
+
+
 .main {
   display: flex;
   align-items: center;
@@ -42,10 +48,12 @@
   width: 1200px; /* 2/3 de la página */
   height: 787px;
 }
+
 .form {
-  padding: 20px;
+  margin-left: 20px;
   background-color: white;
 }
+
 
 
 .caja{
@@ -58,11 +66,33 @@
   margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
+
+@media (max-width: 1150px) {
+  .fondo {
+    display: none;
+  }
+
   .form {
-    max-width: 400px; /* Limita el ancho máximo del formulario en pantallas grandes */
+    margin: -10px;
+    margin-top: -20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 110%; /* 1/3 de la anchura de la ventana del navegador */
+    height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana del navegador */
+    background-image: url('../../../assets/images/fondo.png');
+  }
+
+  .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
   }
 }
+
 
 </style>
 
