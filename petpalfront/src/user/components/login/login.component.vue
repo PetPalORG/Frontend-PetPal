@@ -46,8 +46,8 @@
   background-size: cover; /* Para ajustar la imagen de fondo */
   margin-left: -30px;
   margin-top: -10px;
-  width: 1200px; /* 2/3 de la página */
-  height: 787px;
+  width: 1500px; /* 2/3 de la página */
+  height: 930px;
 }
 
 .form {
