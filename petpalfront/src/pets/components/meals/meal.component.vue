@@ -69,7 +69,7 @@ export default {
           <h1>Agregar comida</h1>
           <pv-button class="add" @click="visible = true">+</pv-button>
         </div>
-        <Dialog v-model:visible="visible" modal header="Añadir tratamiento" :style="{ width: '60rem' }">
+        <Dialog v-model:visible="visible" modal header="Añadir comida" :style="{ width: '60rem' }">
             <span class="text-surface-500 dark:text-surface-400 block mb-8">Añade información de la comida de tu mascota.</span>
             <div class="flex items-center gap-4 mb-4">
                 <label for="food" class="font-semibold w-24">Comida</label>

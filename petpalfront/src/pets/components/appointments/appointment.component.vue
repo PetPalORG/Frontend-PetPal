@@ -82,7 +82,7 @@ export default {
           <h1>Agregar cita</h1>
           <pv-button class="add" @click="visibleAppointment = true">+</pv-button>
         </div>
-        <Dialog v-model:visible="visibleAppointment" modal header="Añadir tratamiento" :style="{ width: '60rem' }">
+        <Dialog v-model:visible="visibleAppointment" modal header="Añadir cita veterinaria" :style="{ width: '60rem' }">
             <span class="text-surface-500 dark:text-surface-400 block mb-8">Añade información de tu cita veterinaria.</span>
             <div class="flex items-center gap-4 mb-4">
                 <label for="vet" class="font-semibold w-24">Veterinaria</label>

@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const routes= [
     {
@@ -49,17 +50,17 @@ const routes= [
     {
         path: "/article/:id",
         name: "article-detail",
-        component: () => import("@/articles/pages/detail/detail.vue")
+        component: () => import("@/articles/pages/detail/detail.vue"),
     },
     {
         path: "/login",
         name: "login",
-        component: () => import("@/user/pages/login/login.vue")
+        component: () => import("@/user/pages/login/login.vue"),
     },
     {
         path: "/register",
         name: "register",
-        component: () => import("@/user/pages/register/register.vue")
+        component: () => import("@/user/pages/register/register.vue"),
     }
 ]
 
@@ -67,6 +68,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
+
 
 
 export default router;
