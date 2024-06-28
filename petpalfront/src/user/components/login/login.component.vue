@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <DialogComponent :isVisible="isDialogVisible" :message="errMsg" @close="isDialogVisible = false" />
+    <DialogComponent :ref="isDialogVisible" :message="errMsg" @close="isDialogVisible = false" />
   </div>
 </template>
 
