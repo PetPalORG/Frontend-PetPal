@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL: "https://localhost:7190/api/v1",
+    baseURL: "https://petpalback20240628014256.azurewebsites.net/api/v1",
 });
 
 export class PetService {
@@ -20,16 +20,13 @@ export class PetService {
     getAppointmentsByPetIdToArray(petId) {
         return http.get(`/pets/${petId}/appointments`)
             .then(response => {
-                // Asegúrate de que la respuesta es un arreglo
                 if (Array.isArray(response.data)) {
                     return response.data;
                 } else {
-                    // Si no es un arreglo, pero existe, envuelve el resultado en un arreglo
                     return response.data ? [response.data] : [];
                 }
             })
             .catch(error => {
-                // Manejo de errores, por ejemplo, devolver un arreglo vacío si hay un error
                 console.error("Error fetching appointments:", error);
                 return [];
             });
