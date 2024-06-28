@@ -4,8 +4,9 @@
 
     <!-- Sección derecha con el formulario de inicio de sesión -->
     <div class="form p-col-4">
+      <div class="box">
       <h2>Pet Pal</h2>
-      <h3><strong>Amamos cuidar a nuestras mascotas</strong></h3>
+      <h3><strong>Amamos cuidar a los animales</strong></h3>
       <div class="formulario">
         <div class="rellenar">
           <label>Correo:</label>
@@ -18,6 +19,7 @@
         <p v-if="showPassword">{{ showPassword? 'Hide' : 'Show' }} Password</p>
         <p><pv-button @click="register" class="caja p-button-lg p-button-warning justify-content-center w-19rem">Registrarse</pv-button></p>
         <p><pv-button @click="singInWithGoogle" class="caja p-button-lg p-button-secondary justify-content-center w-19rem ">Iniciar sesión con Google</pv-button></p>
+      </div>
       </div>
     </div>
   </div>
@@ -92,23 +94,30 @@ const singInWithGoogle = () => {
   margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-  .form {
-    max-width: 400px; /* Limita el ancho máximo del formulario en pantallas grandes */
-  }
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .fondo {
     display: none;
   }
 
-  .main {
+  .form {
+    margin: -10px;
+    margin-top: -20px;
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 110%; /* 1/3 de la anchura de la ventana del navegador */
+    height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana del navegador */
+    background-image: url('../../../assets/images/fondo.png');
   }
 
-  .form {
-    margin-top: 0;
+  .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
   }
 }
 </style>
