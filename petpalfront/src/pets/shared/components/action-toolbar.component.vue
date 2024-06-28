@@ -10,6 +10,14 @@ export default {
     const items = computed(() => {
       return [
         {
+          label: 'Perfil',
+          icon: 'pi pi-apple',
+          path: `/pet/${router.currentRoute.value.params.id}`,
+          command: () => {
+            router.push(`/pet/${router.currentRoute.value.params.id}`);
+          }
+        },
+        {
           label: 'Dieta',
           icon: 'pi pi-apple',
           path: `/pet/${router.currentRoute.value.params.id}/diet`,
@@ -31,14 +39,6 @@ export default {
           path: `/pet/${router.currentRoute.value.params.id}/treatments`,
           command: () => {
             router.push(`/pet/${router.currentRoute.value.params.id}/treatments`);
-          }
-        },
-        {
-          label: 'Historial Médico',
-          icon: 'pi pi-list-check',
-          path: `/pet/${router.currentRoute.value.params.id}/medical-history/appointments`,
-          command: () => {
-            router.push(`/pet/${router.currentRoute.value.params.id}/medical-history/appointments`);
           }
         }
       ]

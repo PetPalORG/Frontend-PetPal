@@ -1,10 +1,10 @@
 export class Appointment {
-    constructor(petID = "", id = "", vet = "", reason = "", details = [], date = "", hour = "") {
-        this.petID = petID;
+    constructor(id = 0, petId = 0, vet = "", reason = "", detail = "", date = new Date(), hour = "") {
         this.id = id;
+        this.petId = petId;
         this.vet = vet;
         this.reason = reason;
-        this.details = details;
+        this.detail = detail;
         this.date = date;
         this.hour = hour;
     }

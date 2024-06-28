@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     buildArticleListFromResponseData(articles) {
-      return articles.map(article => new Article(article.id, article.title, article.content, article.image, article.author, article.authorImage, article.date));
+      return articles.map(article => new Article(article.id, article.title, article.content, article.imagePath, article.author, article.authorImage, article.date));
     },
     getArticles() {
       this.petService.getArticles()
@@ -23,6 +23,7 @@ export default {
             let articles_json = response.data;
             this.allArticles = this.buildArticleListFromResponseData(articles_json);
             this.articles = [...this.allArticles];
+            console.log(this.articles);
           })
           .catch(error => {
             console.error(error);
@@ -55,7 +56,7 @@ export default {
   <input type="text" v-model="searchTerm" @input="searchArticles" placeholder="Search articles">
   <div class="articles">
     <router-link v-for="article in articles" :key="article.id" :to="{ name: 'article-detail', params: { id: article.id } }" class="card">
-      <img :src="article.image" alt="Article photo">
+      <img :src="article.imagePath" alt="Article photo">
       <div class="card-body">
         <h2>{{ article.title }}</h2>
         <div class="author-info">

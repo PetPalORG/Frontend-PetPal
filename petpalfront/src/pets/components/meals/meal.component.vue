@@ -1,20 +1,24 @@
 <script>
 import {PetService} from "@/pets/services/pet.service.js";
+import { Meal } from "@/pets/models/meal.entity";
+import InputText from "primevue/inputtext";
+import Dialog from "primevue/dialog";
+import Button from "primevue/button";
 
 export default {
   name: 'app-diet',
   props: {
     meals: Array,
   },
+  components: {
+    Button, Dialog, InputText
+  },
   data() {
     return {
       showForm: false,
-      newMeal: {
-        title: '',
-        description: '',
-        hour: ''
-      },
-      petService: new PetService()
+      meal: new Meal(),
+      petService: new PetService(),
+      visible: false
     }
   },
   created() {
@@ -22,12 +26,14 @@ export default {
   },
   methods: {
     async fetchMeals() {
-      const response = await this.petService.getMeals();
+      const petId = this.$route.params.id;
+      const response = await this.petService.getMealsByPetId(this.petId);
       this.meals = response.data;
     },
     async addMeal() {
       try {
-        const response = await this.petService.saveMeal(this.newMeal);
+        this.meal.petId = this.$route.params.id;
+        const response = await this.petService.saveMeal(this.meal);
         console.log(response.data);
         this.showForm = false;
         await this.fetchMeals();
@@ -61,21 +67,32 @@ export default {
         <h1>Comidas diarias</h1>
         <div class="title-button">
           <h1>Agregar comida</h1>
-          <pv-button class="add" @click="showForm = true">+</pv-button>
+          <pv-button class="add" @click="visible = true">+</pv-button>
         </div>
-        <div v-if="showForm" class="modal">
-          <div class="modal-content">
-            <input v-model="newMeal.title" placeholder="Título">
-            <input v-model="newMeal.hour" placeholder="Hora">
-            <input v-model="newMeal.description" placeholder="Descripción">
-            <pv-button @click="addMeal" >Save</pv-button>
-          </div>
-        </div>
+        <Dialog v-model:visible="visible" modal header="Añadir tratamiento" :style="{ width: '60rem' }">
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Añade información de la comida de tu mascota.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="food" class="font-semibold w-24">Comida</label>
+                <InputText id="food" class="flex-auto" autocomplete="off" v-model="meal.food" />
+            </div>
+            <div class="flex items-center gap-4 mb-8">
+                <label for="description" class="font-semibold w-24">Descripción</label>
+                <InputText id="description" class="flex-auto" autocomplete="off" v-model="meal.description" />
+            </div>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="hour" class="font-semibold w-24">Hora</label>
+                <InputText id="hour" class="flex-auto" autocomplete="off" v-model="meal.hour"/>
+            </div>
+            <div class="flex justify-end gap-2">
+                <Button type="button" label="Cancelar" severity="secondary" @click="visible = false"></Button>
+                <Button type="button" label="Guardar" @click="visible = false; addMeal()"></Button>
+            </div>
+        </Dialog>
       </div>
       <div class="card-container" v-for="meal in meals">
         <h1 class="hour">{{meal.hour}}</h1>
         <pv-card class="card">
-          <template #title>{{meal.title}}</template>
+          <template #title>{{meal.food}}</template>
           <template #content>{{meal.description}}</template>
           <template #footer>
           <pv-button class="delete-button" @click="deleteMeal(meal.id)">Eliminar</pv-button>

@@ -1,36 +1,50 @@
 <script>
 import {PetService} from "@/pets/services/pet.service.js";
+import { Treatment } from "@/pets/models/treatment.entity";
+import { Medication } from "@/pets/models/medication.entity";
+import { TreatmentDetail } from "@/pets/models/treatmentDetail.entity";
+import Button from "primevue/button";
+import Dialog from "primevue/dialog";
+import InputText from "primevue/inputtext";
 
 export default {
   name: 'app-treatments',
+  components: {
+    Button, Dialog, InputText
+  },
   props: {
     treatments: Array,
+    medications: Array
   },
   data() {
     return {
       showForm: false,
-      newTreatment: {
-        title: '',
-        startDate: '',
-        duration: '',
-        medicine: '',
-        dose: '',
-        indications: ''
-      },
-      petService: new PetService()
+      newTreatment: new Treatment(),
+      newMedication: new Medication(),
+      newTreatmentDetail: new TreatmentDetail(),
+      medicationDetails: {},
+      petService: new PetService(),
+      visible: false
     }
   },
   methods: {
-    async fetchTreatments() {
-      const response = await this.petService.getTreatments();
-      this.treatments = response.data;
-    },
     async addTreatment() {
       try {
-        this.newTreatment.petID = this.$route.params.petID;
+        this.newTreatment.petId = this.$route.params.id;
         const response = await this.petService.saveTreatment(this.newTreatment);
         console.log(response.data);
         this.showForm = false;
+        await this.fetchTreatments();
+        this.$forceUpdate();
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async addMedicationToTreatment(treatmentId) {
+      try {
+        this.newMedication.treatmentId = treatmentId;
+        const response = await this.petService.saveMedication(this.newMedication);
+        console.log(response.data)
         await this.fetchTreatments();
         this.$forceUpdate();
       } catch (error) {
@@ -60,30 +74,47 @@ export default {
     <div class="main">
       <div class="titles">
         <h1>Tratamientos</h1>
-        <div class="title-button">
-          <h1>Agregar tratamiento</h1>
-          <pv-button class="add" @click="showForm = true">+</pv-button>
-        </div>
-        <div v-if="showForm" class="modal">
-          <div class="modal-content">
-            <input v-model="newTreatment.title" placeholder="Título">
-            <input v-model="newTreatment.startDate" placeholder="Fecha de inicio">
-            <input v-model="newTreatment.duration" placeholder="Duración">
-            <input v-model="newTreatment.medicine" placeholder="Medicamento">
-            <input v-model="newTreatment.dose" placeholder="Dosis">
-            <input v-model="newTreatment.indications" placeholder="Indicaciones">
-            <pv-button @click="addTreatment">Agregar</pv-button>
-          </div>
-        </div>
       </div>
       <div class="card-container" v-for="treatment in treatments">
         <pv-card class="card">
-          <template #title>Tratamiento: {{treatment.title}}</template>
+          <template #title>Tratamiento: {{treatment.diagnosis}}</template>
           <template #content>
-            <h2>Duración: {{treatment.startDate}}</h2>
-            <h2>Medicamento: {{treatment.medicine}}</h2>
-            <h2>Dosis: {{treatment.dose}}</h2>
-            <h2>Indicaciones: {{treatment.indications}}</h2>
+            <h2>Fecha de inicio: {{treatment.startDate}}</h2>
+            <h2>Fecha de fin: {{treatment.endDate}}</h2>
+
+            <div v-if="treatment.medication && treatment.medication.length">
+              <h4>Medicación:</h4>
+              <div v-for="(medication, index) in treatment.medication" :key="index">
+                <p>Nombre: {{ medication.name }}</p>
+                <p>Dosis: {{ medication.dosage }}</p>
+                <p>Indicaciones: {{ medication.indications }}</p>
+              </div>
+            </div>
+            <div v-else>
+              <h4>No hay medicación para este tratamiento</h4>
+            </div>
+              
+            
+            <Button @click="visible = true">Añadir medicamento</Button>
+            <Dialog v-model:visible="visible" modal header="Añadir medicación" :style="{ width: '60rem' }">
+              <span class="text-surface-500 dark:text-surface-400 block mb-8">Añade información de tu medicación.</span>
+              <div class="flex items-center gap-4 mb-4">
+                  <label for="name" class="font-semibold w-24">Nombre</label>
+                  <InputText id="name" class="flex-auto" autocomplete="off" v-model="newMedication.name" />
+              </div>
+              <div class="flex items-center gap-4 mb-8">
+                  <label for="dosage" class="font-semibold w-24">Dosis</label>
+                  <InputText id="dosage" class="flex-auto" autocomplete="off" v-model="newMedication.dosage" />
+              </div>
+              <div class="flex items-center gap-4 mb-4">
+                  <label for="indications" class="font-semibold w-24">Indicaciones</label>
+                  <InputText id="indications" class="flex-auto" autocomplete="off" v-model="newMedication.indications"/>
+              </div>
+              <div class="flex justify-end gap-2">
+                  <Button type="button" label="Cancelar" severity="secondary" @click="visible = false"></Button>
+                  <Button type="button" label="Guardar" @click="visible = false; addMedicationToTreatment(treatment.id)"></Button>
+              </div>
+            </Dialog>
           </template>
           <template #footer>
             <pv-button class="delete-button" @click="deleteTreatment(treatment.id)">Eliminar</pv-button>

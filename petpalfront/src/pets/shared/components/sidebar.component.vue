@@ -1,11 +1,10 @@
 <script>
-import ButtonComponent from "@/pets/components/pet-register/button.component.vue";
 import {Pet} from "@/pets/models/pet.entity.js";
 import {PetService} from "@/pets/services/pet.service.js";
 import SpeedDial from 'primevue/speeddial';
 export default {
   name: 'app-sidebar',
-  components: {ButtonComponent, SpeedDial},
+  components: {SpeedDial},
   data() {
     return {
       pets: [],
@@ -20,15 +19,13 @@ export default {
   },
   methods: {
     buildPetListFromResponseData(pets) {
-      return pets.map(pet => new Pet(pet.id, pet.nombre, pet.especie, pet.raza, pet.edad, pet.peso, pet.comidaFavorita, pet.imagen, pet.descripcion));
+      return pets.map(pet => new Pet(pet.id, pet.name, pet.species, pet.breed, pet.age, pet.weight, pet.imagePath, pet.description));
     },
     getPets() {
       this.newApi.getPets()
           .then(response => {
             let pets_json = response.data;
             this.pets = this.buildPetListFromResponseData(pets_json);
-            console.log(response.data);
-            console.log(this.pets);
           })
           .catch(error => {
             console.error(error);
@@ -45,9 +42,10 @@ export default {
 
 <template >
   <Card style="width: 25rem; overflow: hidden" class="p-card">
-    <router-link v-for="pet in pets" :key="pet.id" :to="`/pet/${pet.id}`" >
+    <router-link v-for="pet in pets" :key="pet.id" :to="`/pet/${pet.id}`" class="pet-link">
       <div class="pets">
-        <img :src="pet.imagen" alt="image" class="profile-image">
+        <h2>{{pet.name}}</h2>
+        <img :src="pet.imagePath" alt="image" class="profile-image">
       </div>
     </router-link>
     <div class="card" >
@@ -69,22 +67,26 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
-
 }
 
 .pets {
   display: flex;
+  gap: 20px;
+}
+
+.pets h2 {
+  margin-top: 30px;
+}
+
+.pet-link {
+  text-decoration: none;
+  color: inherit; 
 }
 
 .profile-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-}
-
-
-.card {
 }
 
 </style>

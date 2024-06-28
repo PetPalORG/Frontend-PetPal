@@ -19,10 +19,11 @@ export default {
   },
   methods: {
     buildMealListFromResponseData(meals) {
-      return meals.map(meal => new Meal(meal.id, meal.petID, meal.title, meal.description, meal.hour));
+      return meals.map(meal => new Meal(meal.id, meal.petId, meal.food, meal.description, meal.hour));
     },
     getMeals() {
-      this.newApi.getMeals()
+      const petId = this.$route.params.id;
+      this.newApi.getMealsByPetId(petId)
           .then(response => {
             let meals_json = response.data;
             this.meals = this.buildMealListFromResponseData(meals_json);
