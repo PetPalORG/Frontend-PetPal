@@ -131,15 +131,16 @@ export default {
         </div>
       </section>
 
-      <section id="landing_comunity" class="card bg-cyan-50 flex flex-column md:flex-row justify-content-center align-items-center column-gap-8 p-4">
-        <div class="max-w-30rem border-round bg-blue-100 p-4">
-          <h1>Nadie conoce a tu mascota <br>mejor que TÚ ¿Por qué no <br>compartir lo que sabes?</h1>
-          <p class="p-1">Con una comunidad en constante crecimiento, los dueños de mascotas tienen siempre algo que contar o aportar en el cuidado y mínimo de las mascotas.</p>
-          <pv-button href="#" class="cta">Explorar ahora</pv-button>
+      <section id="video_section" class="card bg-cyan-50 flex flex-column  justify-content-center align-items-center column-gap-8 p-4">
+        <h1>VIDEO About-the-product</h1>
+        <div class="max-w-30rem border-round bg-blue-100 p-4 flex justify-content-center">
+          
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XrjAILusm4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="max-w-30rem p-4 flex justify-content-center md:justify-content-center">
-          <img src="../../../assets/images/landing_comunity.png" alt="" class="investigation-image">
-        </div>
+      </section>
+
+      <section id="about-the-team">
+
       </section>
 
       <section id="landing_feedback" class = "feedback card bg-yellow-50">
@@ -171,7 +172,7 @@ export default {
 
       <section id="landing_authors" class="bg-yellow-200">
         <div class="author__container container">
-          <img src="../../../assets/images/landing_author_leftarrow.svg" class="author__arrow" id="before" alt="">
+          <img src="../../../assets/images/landing_author_leftarrow.svg" class="author__arrow" id="before" alt="" @click="buttonBefore()" >
 
           <section class="author__body author__body--show" data-id="1">
             <div class="author__texts">
@@ -223,6 +224,7 @@ export default {
             </figure>
           </section>
 
+          <img src="../../../assets/images/landing_author_rightarrow.svg" class="author__arrow" id="next" alt="" >
           </div>
       </section>
 
