@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+    <DialogComponent :isVisible="isDialogVisible" :message="errMsg" @close="isDialogVisible = false" />
   </div>
 </template>
 
@@ -102,11 +103,13 @@
 import {ref} from "vue";
 import {getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup} from "firebase/auth";
 import {useRouter} from "vue-router";
+import DialogComponent from "@/user/components/dialog/dialog.component.vue";
 
 const email = ref("");
 const password = ref("");
 const errMsg = ref("");
 const router = useRouter();
+const isDialogVisible = ref(false);
 
 const register = () => {
   router.push('/register');
@@ -124,7 +127,7 @@ const login = () => {
         console.log(error.code);
         switch (error.code) {
           case "auth/invalid-email":
-            errMsg.value = "Correo electrónico inválido, profe, error básico, deme 20 puem";
+            errMsg.value = "Correo electrónico inválido";
             break;
           case "auth/wrong-password":
             errMsg.value = "Contraseña incorrecta";
@@ -133,6 +136,7 @@ const login = () => {
             errMsg.value = "Error en correo o contraseña";
             break;
         }
+        isDialogVisible.value = true;
       });
 };
 
@@ -146,6 +150,8 @@ const singInWithGoogle = () => {
       .catch((error) => {
         console.log(error.code);
         console.log(error.message);
+        errMsg.value = "Error al iniciar sesión con Google";
+        isDialogVisible.value = true;
       });
 };
 </script>
